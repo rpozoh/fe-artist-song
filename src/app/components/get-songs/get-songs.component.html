@@ -1,0 +1,17 @@
+<form class="animated fadeIn" [formGroup]="getSongsForm" (ngSubmit)="getSongs()" #form="ngForm">
+  <div class="form-row">
+    <h2>Buscar canciones</h2>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="productName">Nombre Artista</label>
+      <input class="form-control" type="text" [ngClass]="{ 'is-invalid' : !getSongsForm.get( 'artistName' ) }" id="artistName" placeholder="Nombre..." formControlName="artistName">
+      <div class="invalid-feedback" *ngIf="getSongsForm.controls['artistName'].errors?.['required']">
+        El nombre del artista es requerido!
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-dark" type="submit" [disabled]="!form.valid">
+    Buscar
+  </button>
+</form>
