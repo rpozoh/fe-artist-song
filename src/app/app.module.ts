@@ -14,6 +14,8 @@ import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { GetSongsComponent } from './components/get-songs/get-songs.component';
+import { ArtistInfoComponent } from './artist-info/artist-info.component';
+import { SongInfoComponent } from './song-info/song-info.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { GetSongsComponent } from './components/get-songs/get-songs.component';
     BodyComponent,
     FooterComponent,
     HomeComponent,
-    GetSongsComponent
+    GetSongsComponent,
+    ArtistInfoComponent,
+    SongInfoComponent
   ],
   imports: [
     BrowserModule,

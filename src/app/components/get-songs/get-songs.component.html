@@ -15,3 +15,6 @@
     Buscar
   </button>
 </form>
+<div>
+  <app-artist-info [artistInfo]="artistInfo" [artistName]="getSongsForm.controls['artistName'].value" *ngIf="artistInfo.length > 0"></app-artist-info>
+</div>
