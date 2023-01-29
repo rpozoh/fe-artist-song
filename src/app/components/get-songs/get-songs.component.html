@@ -14,7 +14,8 @@
   <button class="btn btn-dark" type="submit" [disabled]="!form.valid">
     Buscar
   </button>
+  <router-outlet></router-outlet>
 </form>
-<div>
+<!--<div>
   <app-artist-info [artistInfo]="artistInfo" [artistName]="getSongsForm.controls['artistName'].value" *ngIf="artistInfo.length > 0"></app-artist-info>
-</div>
+</div>-->

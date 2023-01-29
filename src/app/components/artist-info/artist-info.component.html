@@ -1,0 +1,14 @@
+<router-outlet></router-outlet>
+<div *ngIf="!loading">
+    <p>Nombre del artista : {{artistName}}</p>
+    <p>Total Albumes {{artistInfo.total_albumes}}</p>
+    <p>Total Canciones {{artistInfo.total_canciones}}</p>
+    <h4>Albumes</h4>
+    <ul>
+        <li *ngFor="let album of artistInfo.albumes">{{album}}</li>
+    </ul>
+    <h4>Canciones</h4>
+    <div class="card-columns">
+        <app-song-info [songInfo]="artistInfo.canciones" *ngFor="let song of artistInfo.canciones; let i = index" [index]="i"></app-song-info>
+    </div>
+</div>

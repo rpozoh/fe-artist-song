@@ -14,22 +14,16 @@ export class GetSongsComponent implements OnInit {
   getSongsForm : FormGroup;
   categoryChecked : any;
 
-  constructor( private router : Router,
-               private activatedRoute : ActivatedRoute,
-               private _songService : SongService) {
+  constructor( private router : Router ) {
     this.getSongsForm = new FormGroup({
       'artistName' : new FormControl( '', [ Validators.required ]),
     });
   }
 
   ngOnInit() {
-    console.log(this.artistInfo);
   }
 
   getSongs() {
-    this._songService.getSongs(this.getSongsForm.controls['artistName'].value).subscribe(songsData => {
-      this.artistInfo.push(songsData);
-      console.log(this.artistInfo);
-    });
+    this.router.navigate( ['/artist', this.getSongsForm.controls['artistName'].value] );
   }
 }

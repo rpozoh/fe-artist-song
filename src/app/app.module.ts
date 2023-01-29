@@ -4,6 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+// Servicios
+import { SongService } from './services/songs.service';
+
 // Rutas
 import { APP_ROUTES } from './app.routes';
 
@@ -14,8 +17,8 @@ import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { GetSongsComponent } from './components/get-songs/get-songs.component';
-import { ArtistInfoComponent } from './artist-info/artist-info.component';
-import { SongInfoComponent } from './song-info/song-info.component';
+import { ArtistInfoComponent } from './components/artist-info/artist-info.component';
+import { SongInfoComponent } from './components/song-info/song-info.component';
 
 
 @NgModule({
@@ -36,7 +39,7 @@ import { SongInfoComponent } from './song-info/song-info.component';
     ReactiveFormsModule,
     RouterModule.forRoot( APP_ROUTES,{ useHash : true } )
   ],
-  providers: [],
+  providers: [SongService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
