@@ -4,6 +4,9 @@
         <p class="card-text">Album: {{ songInfo[index].nombre_album }}</p>
         <p class="card-text">Fecha de Lanzamiento: {{songInfo[index].fecha_lanzamiento}}</p>
         <p class="card-text">Precio {{songInfo[index].precio.valor}} {{songInfo[index].precio.moneda}}</p>
+        <button type="button" class="btn btn-danger btn-block" (click)="addFavorite()">
+            Agregar a favoritos
+        </button>
     </div>
 </div>
 <router-outlet></router-outlet>

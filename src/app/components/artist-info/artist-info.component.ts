@@ -8,6 +8,7 @@ import { SongService } from '../../services/songs.service';
   providers : [SongService]
 })
 export class ArtistInfoComponent implements OnInit {
+
   artistName : string = "";
   artistInfo : any = {};
   loading = true;

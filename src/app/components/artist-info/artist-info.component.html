@@ -9,6 +9,6 @@
     </ul>
     <h4>Canciones</h4>
     <div class="card-columns">
-        <app-song-info [songInfo]="artistInfo.canciones" *ngFor="let song of artistInfo.canciones; let i = index" [index]="i"></app-song-info>
+        <app-song-info [artistName]="artistName" [songInfo]="artistInfo.canciones" *ngFor="let song of artistInfo.canciones; let i = index" [index]="i"></app-song-info>
     </div>
 </div>

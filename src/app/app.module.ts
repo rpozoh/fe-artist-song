@@ -19,6 +19,7 @@ import { HomeComponent } from './components/home/home.component';
 import { GetSongsComponent } from './components/get-songs/get-songs.component';
 import { ArtistInfoComponent } from './components/artist-info/artist-info.component';
 import { SongInfoComponent } from './components/song-info/song-info.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SongInfoComponent } from './components/song-info/song-info.component';
     HomeComponent,
     GetSongsComponent,
     ArtistInfoComponent,
-    SongInfoComponent
+    SongInfoComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
